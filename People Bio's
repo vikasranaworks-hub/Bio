@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SABA-NJ Team</title>
+  <style>
+    /*body { margin: 0; padding: 0; font-family: Arial, sans-serif; background: #f5f5f5; }*/
+    .team-section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+    }
+    .team-member {
+      display: flex;
+      align-items: stretch;
+      gap: 30px;
+    }
+    /* Alternate layout */
+    .team-member:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+    .member-img, .member-info {
+      flex: 1;
+      min-width: 300px;
+    }
+    .member-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+      max-height: 700px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .member-info {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    .member-info h2 { margin: 0 0 8px; font-size: 26px; color: #222; }
+    .member-info h4 { margin: 0 0 16px; font-size: 20px; color: #c62828; }
+    .member-info p { margin: 0; line-height: 1.6; color: #444; }
+
+    @media (max-width: 767px) {
+      .team-member {
+        flex-direction: column !important;
+      }
+      .member-img img {
+        max-height: 400px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="team-section">
+
+    <!-- Prema L. Roddam -->
+    <div class="team-member">
+      <div class="member-img">
+       <img src="https://darkslategray-cheetah-471478.hostingersite.com/wp-content/uploads/2025/06/President-Prema-Roddam_hd-1.jpg">
+      </div>
+      <div class="member-info">
+        <h2>Prema L. Roddam</h2>
+        <h4>President</h4>
+        <p>
+          Prema is a senior associate with Fragomen, Del Ray, Bernsen & Loewy in its Matawan NJ office. She focuses her practice in the areas of global mobility, corporate immigration, related corporate compliance and advisory services. Her experience spans across various industry verticals such as Telecom, IT, Healthcare, Pharma and Entertainment. She is admitted to practice in the State of New York. Prema is actively involved and supports several non-profit organizations that benefit the South-Asian diaspora. She is dedicated to advocating for women empowerment and women's rights and serves as the Vice-President, Board of Directors for Manavi (manavi.org). She also serves as the co-chair for the TiE-NJ Women with a mission to foster women entrepreneurs (nj.tie.org). Prema is also a member of the Diversity Committee of the NJ State Bar Association.
+        </p>
+      </div>
+    </div>
+
+    <!-- Sara Khan-Duprat -->
+    <div class="team-member">
+      <div class="member-img">
+       <img src="https://darkslategray-cheetah-471478.hostingersite.com/wp-content/uploads/2025/06/Untitled-design.png">
+      </div>
+      <div class="member-info">
+        <h2>Sara Khan-Duprat</h2>
+        <h4>President-Elect</h4>
+        <p>
+          Sara Khan-Duprat is an Associate at Segal McCambridge, where she practices insurance defense and professional malpractice lawsuits. Formerly, she practiced as a medical malpractice, and as auto insurance defense attorney. Sara has been a member of SABA-NJ since she graduated Seton Hall Law School in 2020. She was formerly the Director of Sponsorships for SABA-NJ in 2023. Sara also holds a MPH from Drexel University Dornsife School of Public Health, and a Certificate in Leadership and Management for Lawyers from Bucerius Law School in Germany.
+        </p>
+      </div>
+    </div>
+
+    <!-- Rippi K. Karda -->
+    <div class="team-member">
+      <div class="member-img">
+      <img src="https://darkslategray-cheetah-471478.hostingersite.com/wp-content/uploads/2025/06/IPP-Rippi-K.-Karda_High.png">
+      </div>
+      <div class="member-info">
+        <h2>Rippi K. Karda</h2>
+        <h4>Immediate Past President</h4>
+        <p>
+          Rippi K. Karda serves as the SABA-NJ 2024 Immediate Past President, Chair of the Asian American Pacific Islander (AAPI) Commission of New Jersey, Co-Chair of the NJ Punjabi Chamber of Commerce, Treasurer of the Women of Excellence Network, and Advisory Board Member for Centerforce Conference. As an Associate General Counsel in the Public Policy, Law and Security department at Verizon Communications Inc., Rippi handles contracts for Sourcing involving Human Resources Benefits/Plans, Supplier Diversity, Advertising Agencies, Contact Centers, Contingent Workforce and Executive Recruiting.
+        </p>
+      </div>
+    </div>
+
+    <!-- Chaitali R. Gandhi -->
+    <div class="team-member">
+      <div class="member-img">
+        <img src="https://darkslategray-cheetah-471478.hostingersite.com/wp-content/uploads/2025/06/VP-of-Affiliate-Relations-Chaitali-Gandhi-1152x1536-High.png" alt="Chaitali R. Gandhi">
+      </div>
+      <div class="member-info">
+        <h2>Chaitali R. Gandhi</h2>
+        <h4>Vice President of Affiliate Relations</h4>
+        <p>
+          Chaitali R. Gandhi has been in-house counsel for Liberty Mutual since 2021. In her capacity, she conducts all stages of litigation. She has been an active member of SABA-NJ for a few years, and currently serves as the VP of Affiliate Relations. She earned her JD from Rutgers Law where she was a member of a number of affinity student bar organizations and the Rutgers Computer & Technology Law Journal. She received her bachelor’s in biology from the New Jersey Institute of Technology.
+        </p>
+      </div>
+    </div>
+
+    <!-- Hozaifa Cassubhai -->
+    <div class="team-member">
+      <div class="member-img">
+        <img src="https://darkslategray-cheetah-471478.hostingersite.com/wp-content/uploads/2025/06/VP-of-Programming-Hozaifa-Cassubhai_High.png" alt="Hozaifa Cassubhai">
+      </div>
+      <div class="member-info">
+        <h2>Hozaifa Cassubhai</h2>
+        <h4>Vice President of Programming</h4>
+        <p>
+          A partner at Bailey Duquette P.C., Hozaifa Cassubhai practices civil and complex commercial litigation, overseeing the firm’s New Jersey and Washington State matters. With Big law training combined with a federal district court clerkship and in-house counsel background, Hozaifa is a versatile advocate and counselor with significant experience in state and federal courts and arbitration forums covering a broad range of business-to-business, corporate governance, employment, and other commercial disputes. He has been recognized as a Rising Star (2014-2018) and Super Lawyer (2019-2024) for business litigation.
+        </p>
+      </div>
+    </div>
+
+    <!-- Tanvi Valsangikar -->
+    <div class="team-member">
+      <div class="member-img">
+        <img src="https://darkslategray-cheetah-471478.hostingersite.com/wp-content/uploads/2025/06/VP-of-Public-Relations-Tanvi-Valsangikar_High.png" alt="Tanvi Valsangikar">
+      </div>
+      <div class="member-info">
+        <h2>Tanvi Valsangikar</h2>
+        <h4>Vice President of Public Relations</h4>
+        <p>
+          Tanvi Valsangikar serves as the SABA-NJ 2024 Vice President of Public Relations and Secretary of the New York State Bar Association’s Committee on Media Law. As Legal Counsel for Springer Nature, Tanvi handles contracts, licensing, pre-publication review, copyright, and trademark matters. Prior to Springer Nature, Tanvi was a Legal Fellow at Penguin Random House. She earned her J.D from Rutgers Law School, 2022, where she was the Senior Notes Editor for the Rutgers Law Record, and was the Vice President of Community Affairs for APALSA. She received her B.S. in Public Health from the University of Maryland in 2019.
+        </p>
+      </div>
+    </div>
+
+    <!-- Suhani Patel -->
+    <div class="team-member">
+      <div class="member-img">
+        <img src="https://darkslategray-cheetah-471478.hostingersite.com/wp-content/uploads/2025/06/VP-of-Sponsorships-Suhani-Patel-scaled_High.png" alt="Suhani Patel">
+      </div>
+      <div class="member-info">
+        <h2>Suhani Patel</h2>
+        <h4>Vice President of Sponsorships</h4>
+        <p>
+          Suhani Patel is an Attorney at FINRA through their Honors Program. She contributes to Enforcement's investigation and decisions regarding disciplinary actions against individuals or firms. She also provides support to the investigations and litigation team. Prior to joining FINRA, Suhani interned at several respected corporations in New Jersey and New York. She earned her J.D from Rutgers Law School, 2022 and was awarded The Allan Axelrod Prize at graduation. While at Rutgers, Suhani was the Editor in Chief for the Rutgers Business Law Review. Her note, Are Streaming Services, the Modern Day Insiders was published in the 2021 Fall issue. She was also a clinical student in the Federal Tax Clinic, where she provided tax assistance to low income individuals. She received her B.B.A, cum laude, in Finance from the University of Cincinnati in 2019.
+        </p>
+      </div>
+    </div>
+
+    <!-- Akum K. Singh -->
+    <div class="team-member">
+      <div class="member-img">
+        <img src="https://darkslategray-cheetah-471478.hostingersite.com/wp-content/uploads/2025/06/Treasurer-Akum-K.-Singh_High.png" alt="Akum K. Singh">
+      </div>
+      <div class="member-info">
+        <h2>Akum K. Singh</h2>
+        <h4>Treasurer</h4>
+        <p>
+          Akum K. Singh is currently Associate Corporate Counsel at Saks OFF 5TH. She handles commercial contracts related to information technology, software licensing, information security, financial services, consulting, cloud services, supply chain/logistics, confidentiality, and a wide range of other goods and services. Prior to joining Saks OFF 5TH, Akum was an attorney at a New Jersey firm where she represented clients in a wide range of complex litigation issues, focusing on commercial and contract dispute matters. She earned her J.D. from Rutgers Law School in 2022 with a Certificate in Corporate and Business Law, where she was Senior Editor for the Rutgers Business Law Review. She received her B.A., cum laude, in Political Science with a minor in International and Global Studies from Rutgers University in 2019.
+        </p>
+      </div>
+    </div>
+
+    <!-- Minal Patel -->
+    <div class="team-member">
+      <div class="member-img">
+        <img src="https://darkslategray-cheetah-471478.hostingersite.com/wp-content/uploads/2025/06/Corresponding-Sec-Minal-Patel_High.png" alt="Minal Patel">
+      </div>
+      <div class="member-info">
+        <h2>Minal Patel</h2>
+        <h4>Corresponding Secretary</h4>
+        <p>
+          Minal Patel is a corporate associate at DLA Piper focusing on mergers and acquisitions primarily in the technology, life sciences and healthcare industries. She graduated from Brooklyn Law School in 2023. She became a member of SABA-NJ when she was awarded SABA-NJ’s Women Scholarship for Women’s History Month as a 3L law student. Minal currently serves on the board as the Corresponding Secretary.
+        </p>
+      </div>
+    </div>
+
+    <!-- Mishita Jethi -->
+    <div class="team-member">
+      <div class="member-img">
+        <img src="https://darkslategray-cheetah-471478.hostingersite.com/wp-content/uploads/2025/06/Mishita_High.png" alt="Mishita Jethi">
+      </div>
+      <div class="member-info">
+        <h2>Mishita Jethi</h2>
+        <h4>Recording Secretary</h4>
+        <p>
+          Mishita Jethi is a Partner at Chugh, LLP where she practices immigration law. She has extensive experience with employment-based immigration petitions. She earned her LL.M from the University of Chicago Law School. Mishita has been a member of SABA-NJ since 2017. She previously served on the Executive Board of SABA-NJ as Secretary in 2018, and as Treasurer in 2019.
+        </p>
+      </div>
+    </div>
+
+    <!-- Naju R. Lathia -->
+    <div class="team-member">
+      <div class="member-img">
+        <img src="https://darkslategray-cheetah-471478.hostingersite.com/wp-content/uploads/2025/06/RR-North-Naju-Lathia_High.png" alt="Naju R. Lathia">
+      </div>
+      <div class="member-info">
+        <h2>Naju R. Lathia</h2>
+        <h4>Regional Representative - North Region</h4>
+        <p>
+          Naju R. Lathia, partner in the New Jersey office of Day Pitney LLP, assists clients in a broad spectrum of matters including complex commercial litigation, internal and white-collar investigations, and product liability and tort matters. She is co-chair of the Law Partners section of South Asian Bar Association of North America and a member of multiple bar associations. She was honored as a “2021 New Leader of the Bar” and received Day Pitney’s Coleman Award for outstanding pro bono work in 2018.
+        </p>
+      </div>
+    </div>
+
+    <!-- Rachna B. Malkana -->
+    <div class="team-member">
+      <div class="member-img">
+        <img src="https://darkslategray-cheetah-471478.hostingersite.com/wp-content/uploads/2025/06/RR-Central-Rachna-Malkana_High.png" alt="Rachna B. Malkana">
+      </div>
+      <div class="member-info">
+        <h2>Rachna B. Malkana</h2>
+        <h4>Regional Representative - Central Region</h4>
+        <p>
+          Rachna B. Malkana is an attorney admitted to the State of New Jersey. Her practice focuses on real estate law, both commercial and residential. She earned a B.S. from Rutgers University and a J.D. from St. John’s University School of Law. She has served SABA-NJ in roles including Executive Liaison to Law Students, Treasurer, Vice-President, President-Elect, President, and Immediate Past President. She now serves as Central Jersey Regional Representative and holds leadership roles in national committees of SABA.
+        </p>
+      </div>
+    </div>
+
+    <!-- Mahesh Rajan -->
+    <div class="team-member">
+      <div class="member-img">
+        <img src="https://darkslategray-cheetah-471478.hostingersite.com/wp-content/uploads/2025/06/RR-Central-Mahesh-Rajan_-High.png" alt="Mahesh Rajan">
+      </div>
+      <div class="member-info">
+        <h2>Mahesh Rajan</h2>
+        <h4>Regional Representative - Central Region</h4>
+        <p>
+          Mahesh Rajan is the founder of Rajan Legal PC with over 20 years of legal experience. He focuses on complex commercial transactions, representing developers, owners, and managers of large real estate holdings including hospitality and retail properties. He is also a former founding Vice President of SABA-NJ and has served on the New Jersey Office of Attorney Ethics Ethics Committee.
+        </p>
+      </div>
+    </div>
+
+    <!-- Amit Parikh -->
+    <div class="team-member">
+      <div class="member-img">
+        <img src="https://darkslategray-cheetah-471478.hostingersite.com/wp-content/uploads/2025/06/RR-South-Amit-Parikh-scaled_High.jpg" alt="Amit Parikh">
+      </div>
+      <div class="member-info">
+        <h2>Amit Parikh</h2>
+        <h4>Regional Representative - South Region</h4>
+        <p>
+          Amit Parikh is Assistant Deputy General Counsel at Comcast, practicing patent law. He manages Comcast’s patent portfolio across technologies like generative AI, video, broadband, home security, IoT, and ad tech. He graduated from Fordham Law School and is admitted in New Jersey, New York, and Pennsylvania. Before becoming an attorney, he was an engineer at Citigroup.
+        </p>
+      </div>
+    </div>
+
+</section>
+</body>
+</html>
