@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en" x-data>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Job Listings</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <style>
+    /* Custom CSS to match your image styling */
+    /*body {*/
+    /*    font-family: Arial, sans-serif;*/
+    /*    background-color: #f0f2f5; */
+    /*    margin: 0 !important;*/
+    /*    padding: 0 !important;*/
+    /*    display: flex;*/
+    /*    flex-direction: column;*/
+    /*    align-items: center; */
+    /*}*/
+
+    .job-listing-card {
+        display: flex;
+        align-items: flex-start; /* Align items to the top (logo and text) */
+        background-color: #ffffff; /* White background for the card */
+        border: 1px solid #e0e0e0; /* Light border */
+        border-radius: 8px; /* Rounded corners */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+        padding: 20px;
+        margin-bottom: 25px; /* Space between cards */
+        max-width: 800px; /* Max width for each card, adjust as needed */
+        width: 100%; /* Ensure it takes full width up to max-width */
+        box-sizing: border-box; /* Include padding in width calculation */
+    }
+
+    .job-listing-card .logo-container {
+        flex-shrink: 0;
+        width: 80px;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 20px;
+        border: 1px solid #f0f0f0;
+        border-radius: 4px;
+        overflow: hidden;
+    }
+
+    .job-listing-card .logo-container img {
+        max-width: 90%;
+        max-height: 90%;
+        height: auto;
+        width: auto;
+        display: block;
+    }
+
+    .job-listing-card .job-title {
+        font-size: 1.5em; /* Increased font size for title */
+        font-weight: bold;
+        color: #337ab7; /* Blue color for the title */
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    .job-listing-card .job-description {
+        font-size: 0.95em;
+        color: #555;
+        margin-bottom: 15px;
+        line-height: 1.5;
+    }
+
+    /* New style for "Read more" content */
+    .job-listing-card .read-more-content {
+        font-size: 1.05em; /* Increased font size for read more content */
+        color: #333; /* Slightly darker color for readability */
+    }
+
+    .job-listing-card .read-more-btn {
+        display: inline-block;
+        background-color: #f0ad4e; /* Orange/gold color for button */
+        color: #ffffff;
+        padding: 8px 15px;
+        border-radius: 4px;
+        text-decoration: none;
+        font-size: 0.9em;
+        transition: background-color 0.3s ease;
+    }
+
+    .job-listing-card .read-more-btn:hover {
+        background-color: #ec971f; /* Slightly darker on hover */
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+        .job-listing-card {
+            flex-direction: column;
+            align-items: center;
+            padding: 15px;
+        }
+        .job-listing-card .logo-container {
+            margin-right: 0;
+            margin-bottom: 15px;
+        }
+        .job-listing-card .job-title,
+        .job-listing-card .job-description {
+            text-align: center;
+        }
+    }
+  </style>
+</head>
+<body class="bg-gray-100 p-6">
+  <div class="max-w-3xl mx-auto space-y-6">
+
+    <div class="bg-white p-6 rounded-xl shadow" x-data="{ open: false }">
+      <div class="flex items-center space-x-4 mb-4">
+        <img src="https://www.sabanj.org/wp-content/uploads/2024/10/Innocence-Project-logo-112.webp" class="w-16 h-16 object-contain" alt="Innocence Project Logo" />
+        <h2 class="text-xl font-semibold job-title">Innocence Project</h2>
+      </div>
+      <p class="text-gray-700">
+        Staff Attorney, Strategic Litigation Department The Strategic Litigation Department’s goal is to reduce courts reliance on faulty and unreliable evidence. Focusing on the leading causes of wrongful convictions, the team litigates in the areas of forensic science, eyewitness identification, and unreliable confessions.
+        <span x-show="open" class="read-more-content">
+            <br><br>
+            The Staff Attorney, Strategic Litigation reports to the Director of Strategic Litigation. The department is currently composed of a Director, three staff attorneys and two paralegals. Staff attorneys collaborate with each other as well as staff in the Legal, Policy and Science & Research Departments. The staff attorney hired to fill this position will work primarily on the Innocence Project’s eyewitness identification and interrogation/false confession law reform initiatives. This is a full time position and requires travel.
+            <br><br>
+            Erika Lago| HR Coordinator| Innocence Project | 40 Worth Street, Suite 701, New York, NY 10013 | 212.364.5397
+        </span>
+      </p>
+      <button @click="open = !open" class="mt-4 px-4 py-2 rounded bg-red-600 text-white hover:bg-red-700 focus:outline-none">
+        <span x-text="open ? 'Read less' : 'Read more'"></span>
+      </button>
+    </div>
+
+    <div class="bg-white p-6 rounded-xl shadow" x-data="{ open: false }">
+      <div class="flex items-center space-x-4 mb-4">
+        <img src="https://www.sabanj.org/wp-content/uploads/2024/10/justice-logo-112.webp" class="w-16 h-16 object-contain" alt="DOJ Logo" />
+        <h2 class="text-xl font-semibold job-title">Department of Justice, Civil Rights Division</h2>
+      </div>
+      <p class="text-gray-700">
+        The Department of Justice is seeking candidates for a variety of open positions for supervisory and trial attorneys, as well as administrative and management positions. Job announcements can be found on the Division’s [...]
+        <span x-show="open" class="read-more-content">
+            <br><br>
+            Job announcements can be found on the Division’s homepage, <a href="http://www.justice.gov/crt/employment" class="text-blue-600 underline">http://www.justice.gov/crt/employment</a>. If you need more information about a specific Division vacancy, please call the Office of Human Resources and Security on (202) 514-3934.
+        </span>
+      </p>
+      <button @click="open = !open" class="mt-4 px-4 py-2 rounded bg-red-600 text-white hover:bg-red-700 focus:outline-none">
+        <span x-text="open ? 'Read less' : 'Read more'"></span>
+      </button>
+    </div>
+
+    <div class="bg-white p-6 rounded-xl shadow" x-data="{ open: false }">
+      <div class="flex items-center space-x-4 mb-4">
+        <img src="https://www.sabanj.org/wp-content/uploads/2024/10/Office-of-the-Attorney-General-logo-1256.webp" class="w-16 h-16 object-contain" alt="OAG Logo" />
+        <h2 class="text-xl font-semibold job-title">Office of the Attorney General</h2>
+      </div>
+      <p class="text-gray-700">
+        Please check here for job posting: <a href="https://www.nj.gov/oag/dol-hiring/" class="text-blue-600 underline">https://www.nj.gov/oag/dol-hiring/</a>
+        <span x-show="open" class="read-more-content">
+            <br><br>
+            For current job postings at the Office of the Attorney General, please visit the link provided: <a href="https://www.nj.gov/oag/dol-hiring/" class="text-blue-600 underline">https://www.nj.gov/oag/dol-hiring/</a>. The website provides detailed information on available positions and application procedures.
+        </span>
+      </p>
+      <button @click="open = !open" class="mt-4 px-4 py-2 rounded bg-red-600 text-white hover:bg-red-700 focus:outline-none">
+        <span x-text="open ? 'Read less' : 'Read more'"></span>
+      </button>
+    </div>
+
+    <div class="bg-white p-6 rounded-xl shadow" x-data="{ open: false }">
+      <div class="flex items-center space-x-4 mb-4">
+        <img src="https://www.njoag.gov/wp-content/uploads/2017/10/OAG-1.png" class="w-16 h-16 object-contain" alt="Division of Law Logo" />
+        <h2 class="text-xl font-semibold job-title">Division of Law</h2>
+      </div>
+      <p class="text-gray-700">
+        #19-227: Deputy Attorney General 4 (Special Litigation Section – Trenton, NJ) This unclassified announcement is open to applicants who meet the requirements. If interested, applicants must complete a Division of Law attorney [...]
+        <span x-show="open" class="read-more-content">
+            <br><br>
+            #19-227: Deputy Attorney General 4 (Special Litigation Section – Trenton, NJ) This unclassified announcement is open to applicants who meet the requirements. If interested, applicants must complete a Division of Law attorney application for employment, found at <a href="www.nj.gov/oag/dol-hiring" class="text-blue-600 underline">www.nj.gov/oag/dol-hiring</a>. While completing the application you will be instructed to upload supporting documents including, but not limited to: a resume, cover letter indicating vacancy #19-227, copy of your Certificate of Good Standing with the Supreme Court of New Jersey, a legal writing sample unedited by others, a copy of your unofficial law school transcripts, and an Affirmative Action form. All items indicated above must be submitted through the online application system. Announcement will remain open until all existing vacancies have been filled.
+            <br><br>
+            #19-122: Deputy Attorney General 4 This unclassified announcement is open to applicants who meet the requirements. If interested, applicants must complete a Division of Law attorney application for employment, found at <a href="www.nj.gov/oag/dol-hiring" class="text-blue-600 underline">www.nj.gov/oag/dol-hiring</a> While completing the application you will be instructed to upload supporting documents including but not limited to: a resume, cover letter indicating vacancy #19-122, copy of a current Certificate of Good Standing with the Supreme Court of New Jersey, a legal writing sample unedited by others, a copy of your unofficial law school transcripts, and an Affirmative Action form. The announcement will remain open until all existing vacancies have been filled.
+            <br><br>
+            #19-136: Deputy Attorney General 4 This unclassified announcement is open to applicants who meet the requirements. If interested, applicants must complete a Division of Law attorney application for employment, found at <a href="www.nj.gov/oag/dol-hiring" class="text-blue-600 underline">www.nj.gov/oag/dol-hiring</a>. While completing the application you will be instructed to upload supporting documents including but not limited to: a resume, cover letter indicating vacancy #19-136, copy of a current Certificate of Good Standing with the Supreme Court of New Jersey, a legal writing sample unedited by others, a copy of your unofficial law school transcripts, and an Affirmative Action form. The announcement will remain open until all existing vacancies have been filled.
+        </span>
+      </p>
+      <button @click="open = !open" class="mt-4 px-4 py-2 rounded bg-red-600 text-white hover:bg-red-700 focus:outline-none">
+        <span x-text="open ? 'Read less' : 'Read more'"></span>
+      </button>
+    </div>
+
+    <div class="bg-white p-6 rounded-xl shadow" x-data="{ open: false }">
+      <div class="flex items-center space-x-4 mb-4">
+        <img src="https://www.sabanj.org/wp-content/uploads/2024/10/NNJLS-logo-letterhead-transparent-12.webp" class="w-16 h-16 object-contain" alt="NNJLS Logo" />
+        <h2 class="text-xl font-semibold job-title">Northeast New Jersey Legal Services</h2>
+      </div>
+      <p class="text-gray-700">
+        Legal Services is seeking referrals for pro bono attorneys to assist on immigration matters, ranging from filing an application for renewal of LPR card, petitions, and applications for citizenship. If you are [...]
+        <span x-show="open" class="read-more-content">
+            <br><br>
+            Legal Services is seeking referrals for pro bono attorneys to assist on immigration matters, ranging from filing an application for renewal of LPR card, petitions, and applications for citizenship. If you are interested, please contact Nandini Ravichandran at <a href="mailto:nravichandran@lsnj.org" class="text-blue-600 underline">nravichandran@lsnj.org</a>.
+        </span>
+      </p>
+      <button @click="open = !open" class="mt-4 px-4 py-2 rounded bg-red-600 text-white hover:bg-red-700 focus:outline-none">
+        <span x-text="open ? 'Read less' : 'Read more'"></span>
+      </button>
+    </div>
+
+    <div class="bg-white p-6 rounded-xl shadow" x-data="{ open: false }">
+      <div class="flex items-center space-x-4 mb-4">
+        <img src="https://www.sabanj.org/wp-content/uploads/2024/10/capehart-scatchard-logo-e1515513494592-125.webp" class="w-16 h-16 object-contain" alt="Capehart Scatchard Logo" />
+        <h2 class="text-xl font-semibold job-title">Capehart Scatchard</h2>
+      </div>
+      <p class="text-gray-700">
+        Capehart Scatchard (Mt. Laurel, NJ) is seeking second-year law students for its Summer Law Clerk Program. Summer law clerks work on real projects and have an opportunity to explore many areas of [...]
+        <span x-show="open" class="read-more-content">
+            <br><br>
+            Capehart Scatchard (Mt. Laurel, NJ) is seeking second-year law students for its Summer Law Clerk Program. Summer law clerks work on real projects and have an opportunity to explore many areas of the law and to work directly with a number of attorneys within the Firm who concentrate in a wide variety of legal fields. In addition to research and writing, our summer clerks have an opportunity to attend depositions, trials, client meetings, hearings, conferences, and closings. Candidates must have completed their first year of law school at the time of application. Please submit a cover letter, resume, and law school transcript to Hiring Shareholder, Sanu Dev, Esq., at <a href="mailto:sdev@capehart.com" class="text-blue-600 underline">sdev@capehart.com</a>.
+        </span>
+      </p>
+      <button @click="open = !open" class="mt-4 px-4 py-2 rounded bg-red-600 text-white hover:bg-red-700 focus:outline-none">
+        <span x-text="open ? 'Read less' : 'Read more'"></span>
+      </button>
+    </div>
+
+    <div class="bg-white p-6 rounded-xl shadow" x-data="{ open: false }">
+      <div class="flex items-center space-x-4 mb-4">
+        <img src="https://www.sabanj.org/wp-content/uploads/2024/10/hill-wallack-1.webp" class="w-16 h-16 object-contain" alt="Hill Wallack LLP Logo" />
+        <h2 class="text-xl font-semibold job-title">Hill Wallack LLP</h2>
+      </div>
+      <p class="text-gray-700">
+        Litigation Associate (Princeton Office) Hill Wallack LLP looking for an associate attorney with 2-5 years experience in insurance defense/civil tort litigation. Excellent writing sample and references required. Clerkship following law school also [...]
+        <span x-show="open" class="read-more-content">
+            <br><br>
+            Litigation Associate (Princeton Office) Hill Wallack LLP looking for an associate attorney with 2-5 years experience in insurance defense/civil tort litigation. Excellent writing sample and references required. Clerkship following law school also preferred. Attorney will work side by side with partners in complex and/or catastrophic tort and insurance litigation and provide support for trials, hearings and other legal proceedings. Diverse candidates are encouraged to apply.
+            <br><br>
+            Family Law Associate (Red Bank Office) The Firm seeks an attorney with 3-6 years of experience in New Jersey matrimonial and family law to become part of our rapidly growing team. The candidate will independently handle matters from start to conclusion under the guidance of senior attorneys, including client meetings, negotiations, and courtroom argument. Business development is also a significant part of attorney development and responsibility at Hill Wallack. The successful candidate is entrepreneurial and looking for further growth with our support and training through development and implementation of an individual brand and a business development plan.
+            <br><br>
+            Qualifications: Bar admission in New Jersey required. Admission in New York and/or Pennsylvania a plus. Judicial clerkship in Family Law a plus. Minimum of 3 years’ relevant experience. Solid written and verbal language and communication skills, including honed editing and proofreading. Must be detail-oriented and routinely self-manage follow-up to meet deadlines in a timely manner. Ability to multi-task to manage multiple individual and team projects simultaneously. Ability to self-organize, prioritize and manage timelines. Fluency in multiple languages and/or knowledge of multiple cultural backgrounds a plus.
+            <br><br>
+            Please submit resume and salary requirements to: Michael Kahme, Esq. Managing Partner Hill Wallack LLP P. O. Box 5226 Princeton, New Jersey 08543-5226 <a href="mailto:info@hillwallack.com" class="text-blue-600 underline">info@hillwallack.com</a>
+        </span>
+      </p>
+      <button @click="open = !open" class="mt-4 px-4 py-2 rounded bg-red-600 text-white hover:bg-red-700 focus:outline-none">
+        <span x-text="open ? 'Read less' : 'Read more'"></span>
+      </button>
+    </div>
+
+    <div class="bg-white p-6 rounded-xl shadow" x-data="{ open: false }">
+      <div class="flex items-center space-x-4 mb-4">
+        <img src="https://www.sabanj.org/wp-content/uploads/2024/10/logo122.webp" class="w-16 h-16 object-contain" alt="Rajan & Rajan LLP Logo" />
+        <h2 class="text-xl font-semibold job-title">Rajan & Rajan LLP</h2>
+      </div>
+      <p class="text-gray-700">
+        Transactional/Corporate Attorney Rajan & Rajan, LLP is a boutique law firm located in Central New Jersey. Our firm has represented thousands of clients including Fortune 500 companies, startups, small and large business [...]
+        <span x-show="open" class="read-more-content">
+            <br><br>
+            Transactional/Corporate Attorney Rajan & Rajan, LLP is a boutique law firm located in Central New Jersey. Our firm has represented thousands of clients including Fortune 500 companies, startups, small and large business owners, investors and individuals requiring representation in various areas of the law. We have represented clients in large scale commercial transactions throughout the United States. The firm is seeking an experienced Transactional/Corporate Attorney to join our Commercial/Hospitality Department. Our prime candidate will have experience in Hospitality transactions particularly with top tier brands including Hyatt, Hilton and Marriott, Pharmaceutical transactions, Medical Day Cares, and Restaurant/Liquor License transfers. Admission to the New Jersey Bar is required, admission to the New York Bar preferred.
+            <br><br>
+            The candidate should have 2 to 5 years of relevant experience with the ability to perform the following: Draft, review and negotiate purchase and sale agreements for the acquisition of commercial properties and businesses; Draft, review and negotiate loan documents in connection with acquisitions of commercial properties and businesses for buyer, seller or lender; Review franchise agreements, management agreements, license agreements, and use and occupancy agreements; Form corporate entities, draft entity governance documents, and issue ownership documents; Review title commitments and surveys, and draft closing documents; Draft applications for licenses and permits including liquor licenses in the State of New Jersey and coordinate liquor license transfers in other states; Review and draft commercial leases for both landlord and tenants; and Review and draft employment agreements for employees in the medical, pharmaceutical, and restaurant businesses.
+            <br><br>
+            For consideration kindly forward your resume to <a href="mailto:courtney@rajanandrajan.com" class="text-blue-600 underline">courtney@rajanandrajan.com</a>
+        </span>
+      </p>
+      <button @click="open = !open" class="mt-4 px-4 py-2 rounded bg-red-600 text-white hover:bg-red-700 focus:outline-none">
+        <span x-text="open ? 'Read less' : 'Read more'"></span>
+      </button>
+    </div>
+
+    <div class="bg-white p-6 rounded-xl shadow" x-data="{ open: false }">
+      <div class="flex items-center space-x-4 mb-4">
+        <img src="https://www.sabanj.org/wp-content/uploads/2024/10/logo-1263.webp" class="w-16 h-16 object-contain" alt="Lerner David LLP Logo" />
+        <h2 class="text-xl font-semibold job-title">Lerner David Littenberg Krumholz & Mentlik LLP</h2>
+      </div>
+      <p class="text-gray-700">
+        IP– Experienced Litigation Associate (3-5 years) Lerner David seeks an associate to assist in patent litigation matters. Requirements include a technical or scientific background with a minimum of two years’ experience in [...]
+        <span x-show="open" class="read-more-content">
+            <br><br>
+            IP– Experienced Litigation Associate (3-5 years) Lerner David seeks an associate to assist in patent litigation matters. Requirements include a technical or scientific background with a minimum of two years’ experience in litigation. Experience in patent prosecution is also a plus. The candidate must possess stellar credentials. The candidate should be admitted to practice before the USPTO. Our firm offers competitive salaries as well as entrepreneurial incentives to encourage our attorneys to participate in client development. Please contact Marianne Kinsella, <a href="mailto:mkinsella@lernerdavid.com" class="text-blue-600 underline">mkinsella@lernerdavid.com</a>
+        </span>
+      </p>
+      <button @click="open = !open" class="mt-4 px-4 py-2 rounded bg-red-600 text-white hover:bg-red-700 focus:outline-none">
+        <span x-text="open ? 'Read less' : 'Read more'"></span>
+      </button>
+    </div>
+
+    <div class="bg-white p-6 rounded-xl shadow" x-data="{ open: false }">
+      <div class="flex items-center space-x-4 mb-4">
+        <img src="https://www.sabanj.org/wp-content/uploads/2024/10/Rutgers-logo12.webp" class="w-16 h-16 object-contain" alt="Rutgers Logo" />
+        <h2 class="text-xl font-semibold job-title">Rutgers</h2>
+      </div>
+      <p class="text-gray-700">
+        Associate General Counsel – Healthcare Rutgers, The State University of New Jersey, is seeking an Associate General Counsel- Healthcare for Rutgers University Office of the Senior Vice President and General Counsel (“Office [...]
+        <span x-show="open" class="read-more-content">
+            <br><br>
+            Associate General Counsel – Healthcare Rutgers, The State University of New Jersey, is seeking an Associate General Counsel- Healthcare for Rutgers University Office of the Senior Vice President and General Counsel (“Office of General Counsel”). This position reports to the Senior Vice President and General Counsel as well as the Associate Vice President and Deputy General Counsels, particularly the Associate Vice President and Deputy General Counsel for Health Care. The Associate General Counsel is primarily assigned to advise Rutgers University’s health sciences schools, institutes and centers.
+            <br><br>
+            Among the key duties of this position are the following: Provides legal representation for Rutgers University in various areas including, negotiating and advising on contracts, clinical services agreements, academic affiliation agreements professional services agreements and other transactional matters; health law/risk management issues. Advises on regulatory compliance matters including Stark/Anti-Kickback and patient privacy. Participates in training and preventative law presentations for Rutgers University faculty, staff, administration and governance boards. Provides advice, education, and counsel regarding litigation, subpoenas, and general higher education legal issues.
+            <br><br>
+            View job posting: <a href="http://jobs.rutgers.edu/postings/92386" class="text-blue-600 underline">http://jobs.rutgers.edu/postings/92386</a>
+            <br><br>
+            Individuals interested in applying for these positions should comply with the application procedures and closing dates in the job announcement.
+        </span>
+      </p>
+      <button @click="open = !open" class="mt-4 px-4 py-2 rounded bg-red-600 text-white hover:bg-red-700 focus:outline-none">
+        <span x-text="open ? 'Read less' : 'Read more'"></span>
+      </button>
+    </div>
+
+  </div>
+</body>
+</html>
